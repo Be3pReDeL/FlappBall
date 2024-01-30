@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1a6e368f1954e3abe93d29b0fe3c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _webViewRectTransform: {fileID: 2047619627}
+  _betaContentRectTransform: {fileID: 2047619627}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0

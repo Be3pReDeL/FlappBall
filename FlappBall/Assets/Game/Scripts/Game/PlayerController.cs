@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
             _rb.velocity = Vector2.up * _jumpForce;
 
             _audioSource.PlayOneShot(_jumpSound);
+
+            HapticFeedback.MediumFeedback();
         }
     }
 

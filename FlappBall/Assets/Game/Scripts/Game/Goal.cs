@@ -1,4 +1,5 @@
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
 public class Goal : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class Goal : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
 
             _audioSource.Play();
+
+            HapticFeedback.MediumFeedback();
         }
     }
 }

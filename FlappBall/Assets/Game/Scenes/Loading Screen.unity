@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4405976200006927252, guid: 0bfe3b149145747cc92dc53bb4df4e9b, type: 3}
       propertyPath: appID
-      value: 
+      value: 6476931518
       objectReference: {fileID: 0}
     - target: {fileID: 4405976200006927252, guid: 0bfe3b149145747cc92dc53bb4df4e9b, type: 3}
       propertyPath: devKey
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aeabb41022964ae1ad3e48d99861edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BetaContent: 
+  BetaContent: https://dev-rcovvc6yf0j9213.api.raw-labs.com/flappballgetbetafeatures?key=beta%20feature
 --- !u!1 &1395295543
 GameObject:
   m_ObjectHideFlags: 0
