@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour {
 
     protected virtual void Awake() {
         _tweenObjects = new List<ITweanable>();
+
+        AnimateObjects(true);
     }
 
     public void AddTweenObject(ITweanable tweanable) {
@@ -38,12 +40,6 @@ public class UIController : MonoBehaviour {
         AnimateObjects(false);
         yield return new WaitForSeconds(_animationDuration);
         gameObject.SetActive(false);
-    }
-
-    private IEnumerator StartAnimation(){
-        yield return new WaitForSeconds(0.1f);
-
-        AnimateObjects(true);
     }
 
     public virtual void AnimateObjects(bool appear) {

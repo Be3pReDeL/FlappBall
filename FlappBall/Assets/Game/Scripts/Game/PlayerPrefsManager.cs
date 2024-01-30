@@ -6,10 +6,12 @@ public class PlayerPrefsManager : MonoBehaviour
     private const string MUSICKEY = "Music";
     private const string VIBRATION = "Vibration";
     private const string COINS = "Coins";
-    public static event Action OnCoinsChanged;
+    private const string CUPS = "Cups";
+    private const string GOAL = "Goals";
+    public static event Action OnCoinsChanged, OnGoalsChanged;
 
     private void Awake(){
-        if(PlayerPrefs.GetInt("One Time", 0) == 1){
+        if(PlayerPrefs.GetInt("One Time", 0) == 0){
             AddCoins(100);
             PlayerPrefs.SetInt("Skin_purchased_Ball 1", 1);
             PlayerPrefs.SetInt("Background_purchased_Background 1", 1);
@@ -19,6 +21,9 @@ public class PlayerPrefsManager : MonoBehaviour
 
             PlayerPrefs.SetInt("One Time", 1);
         }
+
+        PlayerPrefs.SetInt(CUPS, 0);
+        PlayerPrefs.SetInt(GOAL, 0);
     }
 
     public static bool GetMusicEnabled() {
@@ -69,5 +74,25 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.Save();
 
         OnCoinsChanged?.Invoke();
+    }
+
+    public static void AddCupsCount(int amount){
+        PlayerPrefs.SetInt(CUPS, GetCupsCount() + amount);
+
+        AddCoins(amount * 10);
+    }
+
+    public static int GetCupsCount(){
+        return PlayerPrefs.GetInt(CUPS, 0);
+    }
+
+    public static void AddGoalsCount(int amount){
+        PlayerPrefs.SetInt(GOAL, GetGoalsCount() + amount);
+
+        OnGoalsChanged?.Invoke();
+    }
+
+    public static int GetGoalsCount(){
+        return PlayerPrefs.GetInt(GOAL, 0);
     }
 }
