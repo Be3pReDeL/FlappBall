@@ -16,7 +16,7 @@ public class ObjectTween : MonoBehaviour, ITweanable {
     [SerializeField] private float _finalAlpha = 1f;
     [SerializeField] private Vector2 _direction;
 
-    private void Start() {
+    private void Awake() { 
         TryGetComponent(out _image);
         TryGetComponent(out _text);
 

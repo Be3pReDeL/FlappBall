@@ -22,12 +22,12 @@ public class UIController : MonoBehaviour {
         }
     }
 
-    protected virtual void OnEnable() {
+    public virtual void OnEnable(){
         AnimateObjects(true);
     }
 
     public virtual void Start(){
-        OnEnable();
+        AnimateObjects(true);
     }
 
     public void StartDisappearAnimation() {
@@ -38,6 +38,12 @@ public class UIController : MonoBehaviour {
         AnimateObjects(false);
         yield return new WaitForSeconds(_animationDuration);
         gameObject.SetActive(false);
+    }
+
+    private IEnumerator StartAnimation(){
+        yield return new WaitForSeconds(0.1f);
+
+        AnimateObjects(true);
     }
 
     public virtual void AnimateObjects(bool appear) {
