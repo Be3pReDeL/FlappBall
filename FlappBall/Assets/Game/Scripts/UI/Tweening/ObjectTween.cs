@@ -26,11 +26,13 @@ public class ObjectTween : MonoBehaviour, ITweanable {
         _UIController.AddTweenObject(this);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void Appear(float duration) {
         SetAlphaToZero();
         MoveAndFade(duration, _finalAlpha);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void Disappear(float duration) {
         MoveAndFade(duration, 0f, deactivateOnComplete: true);
     }

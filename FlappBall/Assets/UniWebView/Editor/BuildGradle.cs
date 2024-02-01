@@ -27,7 +27,6 @@ public class UniWebViewGradleConfig
         StringBuilder str = new StringBuilder();
         bool inDoubleQuote = false;
         bool inSingleQuote = false;
-        bool inDollarVariable = false;
 
         while (reader.Peek() > 0)
         {
@@ -56,7 +55,6 @@ public class UniWebViewGradleConfig
                             m_curNode.AppendChildNode(new UniWebViewGradleContentNode(strf, m_curNode));
                         }
                     }
-                    inDollarVariable = false;
                     str = new StringBuilder();
                     break;
                 case '\t':
@@ -100,31 +98,13 @@ public class UniWebViewGradleConfig
                     str = new StringBuilder();
                     break;
                 case '\"':
-                    if (inDollarVariable) {
-                        str.Append(c);
-                        break;
-                    }
                     inDoubleQuote = !inDoubleQuote;
                     str.Append(c);
                     break;
                 case '\'':
-                    if (inDollarVariable) {
-                        str.Append(c);
-                        break;
-                    }
                     inSingleQuote = !inSingleQuote;
                     str.Append(c);
                     break;
-                case '$': 
-                    {
-                        if (inDoubleQuote || inSingleQuote) {
-                            str.Append(c);
-                            break;
-                        }
-                        inDollarVariable = true;
-                        str.Append(c);
-                        break;
-                    }
                 default:
                     str.Append(c);
                     break;

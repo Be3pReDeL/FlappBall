@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class GameSpeedController : MonoBehaviour
 {
     public GameObject windEffect;

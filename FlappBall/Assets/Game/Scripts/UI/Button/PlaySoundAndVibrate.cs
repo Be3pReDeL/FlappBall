@@ -21,6 +21,7 @@ public class PlaySoundAndVibrate : MonoBehaviour {
         PlayerPrefs.SetInt("Vibration", 1);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void PlaySoundAndVibrateButton(AudioClip audioClip) {
         _audioSource.PlayOneShot(audioClip);
 

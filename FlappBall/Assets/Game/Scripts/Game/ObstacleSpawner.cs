@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _obstaclePrefabs;

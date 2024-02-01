@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using CandyCoded.HapticFeedback;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _jumpForce = 5f;

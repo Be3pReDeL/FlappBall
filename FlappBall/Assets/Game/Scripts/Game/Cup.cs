@@ -1,6 +1,7 @@
 using UnityEngine;
 using CandyCoded.HapticFeedback;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class Cup : MonoBehaviour
 {
     [SerializeField] private int _amount;
