@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class SetGameBackground : MonoBehaviour
 {
     [SerializeField] private Sprite[] _backgrounds;

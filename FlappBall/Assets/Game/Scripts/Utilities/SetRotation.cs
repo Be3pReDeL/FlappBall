@@ -1,4 +1,3 @@
-using E7.NotchSolution;
 using UnityEngine;
 
 public class SetRotation : MonoBehaviour

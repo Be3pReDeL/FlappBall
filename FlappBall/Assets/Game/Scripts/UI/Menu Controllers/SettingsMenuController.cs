@@ -23,12 +23,14 @@ public class SettingsMenuController : UIController
         _vibrationButtonOff.interactable = toggle;
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void ToggleSound(bool toggle) {
         PlayerPrefsManager.SetMusicEnabled(Convert.ToInt32(toggle));
         AudioListener.volume = toggle ? 1 : 0;
         UpdateSoundButtonsState(toggle);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void ToggleVibration(bool toggle) {
         PlayerPrefsManager.SetVibrationEnabled(Convert.ToInt32(toggle));
         UpdateVibrationButtonsState(toggle);

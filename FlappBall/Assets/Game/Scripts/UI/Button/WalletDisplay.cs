@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class WalletDisplay : MonoBehaviour {
     [SerializeField] private TMP_Text walletText;
 

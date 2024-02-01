@@ -45,6 +45,7 @@ public class ItemBuySelect : MonoBehaviour
         OnItemSelect -= UpdateButtonStatus; // Отписываемся от события
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void BuyOrSelect()
     {
         if (isPurchased)

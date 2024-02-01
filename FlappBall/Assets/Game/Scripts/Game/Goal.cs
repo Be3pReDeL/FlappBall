@@ -1,5 +1,7 @@
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class Goal : MonoBehaviour
 {
     [SerializeField] private int _amount;
@@ -30,6 +32,8 @@ public class Goal : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
 
             _audioSource.Play();
+
+            HapticFeedback.MediumFeedback();
         }
     }
 }

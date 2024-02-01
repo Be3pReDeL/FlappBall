@@ -12,26 +12,31 @@ public class UIController : MonoBehaviour {
         AnimateObjects(true);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void AddTweenObject(ITweanable tweanable) {
         if (tweanable != null) {
             _tweenObjects.Add(tweanable);
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void RemoveTweenObject(ITweanable tweanable) {
         if (tweanable != null) {
             _tweenObjects.Remove(tweanable);
         }
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public virtual void OnEnable(){
         AnimateObjects(true);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public virtual void Start(){
         AnimateObjects(true);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public void StartDisappearAnimation() {
         StartCoroutine(DisappearAndDeactivate());
     }
@@ -42,6 +47,7 @@ public class UIController : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
+    [OPS.Obfuscator.Attribute.DoNotRename]
     public virtual void AnimateObjects(bool appear) {
         foreach (var tweenObject in _tweenObjects) {
             if (tweenObject != null) {

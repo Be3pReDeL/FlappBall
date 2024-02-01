@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class PlayerPrefsManager : MonoBehaviour
 {
     private const string MUSICKEY = "Music";

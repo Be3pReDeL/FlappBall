@@ -1,5 +1,7 @@
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
+[OPS.Obfuscator.Attribute.DoNotObfuscateClass]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _damage;
@@ -30,6 +32,8 @@ public class Enemy : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
 
             _audioSource.Play();
+
+            HapticFeedback.MediumFeedback();
         }
     }
 }

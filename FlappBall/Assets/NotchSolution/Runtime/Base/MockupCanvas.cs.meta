@@ -1,10 +1,17 @@
 fileFormatVersion: 2
 guid: 83b8ec99fbf59473891f0f467ac098e7
+AssetOrigin:
+  serializedVersion: 1
+  productId: 157971
+  packageName: Notch Solution
+  packageVersion: 2.0.0
+  assetPath: Assets/NotchSolution/Runtime/Base/MockupCanvas.cs
+  uploadId: 471898
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
-  executionOrder: 0
+  executionOrder: -23
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
